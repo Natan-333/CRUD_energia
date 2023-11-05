@@ -15,8 +15,7 @@ const Grid = ({ users, setUsers, setOnEdit }) => {
 
   const handleDelete = async (id) => {
     try {
-      // Colocar /user lá no back
-      await api.delete("" + id)
+      await api.delete("/" + id)
 
       const newArray = users.filter(user => user.id !== id);
       setUsers(newArray);

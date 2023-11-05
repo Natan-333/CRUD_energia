@@ -20,7 +20,7 @@ function App() {
 
   const getUsers = async () => {
     try {
-      const { data } = await api.get("http://localhost:8800");
+      const { data } = await api.get("/");
       setUsers(data.sort((a, b) => (a.nome > b.nome ? 1 : -1)));
     } catch (error) {
       toast.error(error);

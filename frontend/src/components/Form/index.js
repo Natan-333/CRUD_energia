@@ -66,7 +66,7 @@ const Form = ({ getUsers, onEdit, setOnEdit }) => {
     if (onEdit) {
       try {
         // Sessão onde o usuário será editado
-        await api.put("http://localhost:8800/" + onEdit.id, {
+        await api.put("/" + onEdit.id, {
           nome: user.nome.value,
           email: user.email.value,
           fone: user.fone.value,
@@ -80,7 +80,7 @@ const Form = ({ getUsers, onEdit, setOnEdit }) => {
     } else {
       // Sessão onde o usuário será cadastrado
       try {
-        await api.post("http://localhost:8800", {
+        await api.post("/", {
           nome: user.nome.value,
           email: user.email.value,
           fone: user.fone.value,
@@ -166,7 +166,7 @@ const Form = ({ getUsers, onEdit, setOnEdit }) => {
         <Label>Nome da empresa</Label>
         <Input 
           name="company_name" 
-          placeholder="Company name"
+          placeholder="Nome da empresa"
         />
       </InputArea>
 
