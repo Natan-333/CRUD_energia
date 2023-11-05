@@ -1,7 +1,7 @@
 import express from "express";
 import { addUser, deleteUser, getUsers, updateUser } from "../controllers/user.js";
 
-const router = express.Router()
+const router = express.Router() //const
 
 router.get("/", getUsers)
 
